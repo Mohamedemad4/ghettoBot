@@ -1,8 +1,0 @@
-<!--run this using <machine> FROM THE pi-->
-<launch>
-
-  <include file="$(find base_bot)/launch/cams.launch"></include> 
-  <param name="nodemcu_ip" value="192.168.1.11" />  
-  <node pkg="base_bot" type="cmd_vel2firmwareCurl.py" name="cmd_vel2curlNode" output="screen">
-  </node>
-</launch>

@@ -8,4 +8,5 @@
   
 # Setup
  - change SSID and Password in cmd_vel_servo360/cmd_vel_firmware/src/src.ino to your Wifi's SSID and Password
- - 
+ - change rpi3 ip and password in assemble.launch so it can ssh to it
+ - first time sshing into the Pi use -oHostKeyAlgorithms='ssh-rsa' option so <machine> works

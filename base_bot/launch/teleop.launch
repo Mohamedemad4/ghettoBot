@@ -1,4 +1,8 @@
 <launch>
+   <env name="TURTLEBOT3_MODEL" value="burger"/>
    <include file="$(find turtlebot3_teleop)/launch/turtlebot3_teleop_key.launch"></include>
+	<node name="right_cam_image_view" pkg="image_view" type="image_view" output="screen">
+	 	<remap from="/image" to="/right_cam/image_raw" />
+	</node>
    <include file="$(find base_bot)/launch/assemble.launch"></include>
 </launch>
