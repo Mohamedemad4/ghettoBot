@@ -1,7 +1,5 @@
 <!--Just so you could Say ghetoBot Assemble!-->
 <launch>
-  <include file="$(find base_bot)/launch/cams.launch"></include> 
-  <param name="nodemcu_ip" value="192.168.1.11" />  
-  <node pkg="base_bot" type="cmd_vel2firmwareCurl.py" name="cmd_vel2curlNode" output="screen">
-  </node>
+  <machine name="rpi3" address="192.168.1.12" env-loader="~/ghettoBot/devel/setup.zsh" user="pi"/>
+  <include file="$(find base_bot)/launch/broadcast_all.launch"></include> 
 </launch>
