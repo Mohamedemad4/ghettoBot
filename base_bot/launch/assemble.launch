@@ -1,5 +1,7 @@
-<!--Just so you could Say ghetoBot Assemble!-->
+<!--Just so you could Say ghettoBot Assemble!-->
+<!--Order matters include this in the end of your launch files and anything you would want to run locally -->
 <launch>
-  <machine name="rpi3" address="192.168.1.12" env-loader="~/ghettoBot/devel/setup.zsh" user="pi"/>
-  <include file="$(find base_bot)/launch/broadcast_all.launch"></include> 
+<machine name="rpi3" address="192.168.1.5" default="true"
+ env-loader="/home/pi/ghettoBot/src/base_bot/scripts/init_env.sh" user="pi" password="123"/>
+<include file="$(find base_bot)/launch/rpi3.launch"/>
 </launch>
