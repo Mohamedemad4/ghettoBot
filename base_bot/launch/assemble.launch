@@ -1,12 +1,7 @@
 <!--Just so you could Say ghettoBot Assemble!-->
 <!--Order matters include this in the end of your launch files and anything you would want to run locally -->
 <launch>
-<param name="nodemcu_ip" value="192.168.1.11" />
-<arg name="video_stream_provider_right" value="0" />
-<arg name="video_stream_provider_left" value="1" />
-
 <machine name="rpi3" address="192.168.1.5" default="true"
  env-loader="/home/pi/ghettoBot/src/base_bot/scripts/init_env.sh" user="pi" password="123"/>
-    <include file="$(find base_bot)/launch/rpi3.launch"/>
-
+<include file="$(find base_bot)/launch/rpi3.launch"/>
 </launch>
