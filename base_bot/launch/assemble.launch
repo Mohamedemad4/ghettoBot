@@ -2,7 +2,7 @@
 <!--Order matters include this in the end of your launch files and anything you would want to run locally -->
 <launch>
 <!--Local Nodes Go Here-->
-<machine name="rpi3" address="192.168.1.5" default="true"
+<machine name="rpi3" address="192.168.1.8" default="true"
  env-loader="/home/pi/ghettoBot/src/base_bot/scripts/init_env.sh" user="pi" password="123"/>
 <!--Remote Nodes on rpi3 Go Here-->
 <param name="nodemcu_ip" value="192.168.1.10" />  
@@ -25,8 +25,8 @@
 <!-- By default, calibrations are stored to file://${ROS_HOME}/camera_info/${NAME}.yaml
 To use your own fill this arg with the corresponding url, e.g.:
 "file:///$(find your_camera_package)/config/your_camera.yaml" -->
-<arg name="camera_info_url_right" default="" />
-<arg name="camera_info_url_left" default="" />
+<arg name="camera_info_url_right" default="file:///$(find base_bot)/info/right.yaml" />
+<arg name="camera_info_url_left" default="file:///$(find base_bot)/info/right.yaml" />
 
 <!-- flip the image horizontally (mirror it) -->
 <arg name="flip_horizontal" default="false" />
