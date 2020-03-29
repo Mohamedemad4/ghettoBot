@@ -2,14 +2,14 @@
 <!--Order matters include this in the end of your launch files and anything you would want to run locally -->
 <launch>
 <!--Local Nodes Go Here-->
-<machine name="rpi3" address="192.168.1.8" default="true"
+<machine name="rpi3" address="192.168.1.11" default="true"
  env-loader="/home/pi/ghettoBot/src/base_bot/scripts/init_env.sh" user="pi" password="123"/>
 <!--Remote Nodes on rpi3 Go Here-->
-<param name="nodemcu_ip" value="192.168.1.10" />  
+<param name="nodemcu_ip" value="192.168.1.12" />  
   <node pkg="base_bot" type="cmd_vel2firmwareCurl.py" name="cmd_vel2curlNode" output="screen"/>
 
-<arg name="camera_name_right" default="right_cam" />
-<arg name="camera_name_left" default="left_cam" />
+<arg name="camera_name_right" default="right" />
+<arg name="camera_name_left" default="left" />
 <!-- video_stream_provider can be a number as a video device or a url of a video stream -->
 <arg name="video_stream_provider_right" default="0" />
 <arg name="video_stream_provider_left" default="1" />
